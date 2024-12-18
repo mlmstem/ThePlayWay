@@ -42,10 +42,20 @@ Open http://localhost:3000 in your browser to access the app.
 This project utilizes the following technologies:
 
 *TypeScript*: For a strongly-typed development environment, improving code reliability and maintainability.
+
+
 *React*: As the base library for building user interfaces.
+
+
 *Next.js*: Custom Framework as suggested.
+
+
 *Shadcn/UI*: Chosen for its ease of creating mobile-responsive components that are easy to style further.
+
+
 *Framer Motion*: Used for smooth transitions between quiz questions, improving the user experience.
+
+
 *Jest*: Employed to validate the app’s primary features through testing.
 
 ## Design Philosophy
@@ -71,33 +81,58 @@ These features were not implemented as the project scope required a minimalistic
 ## Project Structure
 Below is the folder structure for the project:
 
-quiz-app/
-├── public/
-│   ├── assets/             # Static Assets (e.g., images)
-├── src/
-│   ├── app/
-│   │   ├── quiz/
-│   │   │   └── page.tsx    # Quiz Page
-│   │   ├── result/
-│   │   │   └── page.tsx    # Result Page
-│   │   └── layout.tsx      # Global Layout
-│   ├── components/
-│   │   ├── QuizHeader.tsx  # Quiz Header Component
-│   │   ├── QuestionSlide.tsx # Question Component
-│   │   ├── FinishDialog.tsx # Dialog Component
-│   │   └── ui/             # UI Utility Components (e.g., Toaster)
-│   ├── libs/
-│   │   └── question.ts     # List of Quiz Questions
-│   ├── __tests__/
-│   │   ├── Quiz.test.tsx   # Unit Tests for Quiz Page
-│   │   ├── Result.test.tsx # Unit Tests for Result Page
-│   │   └── Home.test.tsx   # Unit Tests for Home Page
-│   ├── styles/
-│   │   └── globals.css     # Global Styles
-├── Dockerfile              # Docker Configuration
-├── package.json            # Dependencies and Scripts
-└── README.md               # Project Documentation
 
+### `/public/assets/`
+Contains all the static assets, such as images used across the app.
+
+---
+
+### `/src/app/`
+Holds the main pages and layouts of the application:
+- **`quiz/page.tsx`**: The quiz page where users answer questions.
+- **`result/page.tsx`**: The result page displaying quiz outcomes.
+- **`layout.tsx`**: The global layout for consistent design and structure.
+
+---
+
+### `/src/components/`
+Reusable components to build the UI:
+- **`QuizHeader.tsx`**: Displays the header with module ID, timer, and progress bar.
+- **`QuestionSlide.tsx`**: Handles the rendering of quiz questions and options.
+- **`FinishDialog.tsx`**: Provides a confirmation dialog for finishing the quiz.
+- **`ui/`**: Includes utility components such as `Toaster` for notifications.
+
+---
+
+### `/src/libs/`
+Contains application logic or helper data:
+- **`question.ts`**: Stores the quiz questions used in the app.
+
+---
+
+### `/src/__tests__/`
+Unit tests for validating app functionality:
+- **`Quiz.test.tsx`**: Tests for the quiz page.
+- **`Result.test.tsx`**: Tests for the result page.
+- **`Home.test.tsx`**: Tests for the home page.
+
+---
+
+### `/src/styles/`
+Global styles for the application:
+- **`globals.css`**: Defines overarching styles applied throughout the app.
+
+---
+
+### Root Files
+- **`Dockerfile`**: Configuration for containerizing the app.
+- **`package.json`**: Contains the dependencies and npm scripts for the project.
+- **`README.md`**: Documentation for the project.
+
+---
+
+## Navigation
+This structure ensures clear separation of concerns, modularity, and ease of scalability for future enhancements.
 
 
 
