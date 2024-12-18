@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import tailwindcss from "tailwindcss";
 
 export default {
     darkMode: ["class"],
@@ -62,4 +62,4 @@ export default {
   	}
   },
   plugins: [],
-} satisfies Config;
+} satisfies typeof tailwindcss.Config;
